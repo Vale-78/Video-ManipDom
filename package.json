@@ -1,6 +1,10 @@
 {
   "homepage": "https://Vale-78.github.io/Video-ManipDom",
   "scripts": {
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d build", 
+    "test": "react-scripts test", 
+    "eject": "react-scripts eject" ,
     "start": "snowpack dev",
     "build": "snowpack build",
     "format": "prettier --write \"src/**/*.js\"",
