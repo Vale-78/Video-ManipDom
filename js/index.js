@@ -5,6 +5,7 @@ $(document).on("ready", function(){
   document.addEventListener("mozfullscreenchange", eventFullScreen);
   document.addEventListener("MSFullscreenChange", eventFullScreen);
   // Eventos del video
+  
   $("video").on("play", function(){
     $(this).parent().children(".video-controlls").children(".playpause").children(".play").hide();
     $(this).parent().children(".video-controlls").children(".playpause").children(".pause").show();
