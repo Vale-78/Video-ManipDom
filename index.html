@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -15,11 +14,12 @@
       More about config options:
       - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
     -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./public/index.css"
-    />
+    <link rel="stylesheet" href="./css/animation.css" media="screen"/>
+    <link rel="stylesheet" href="./css/fontello-embedded.css" media="screen"/>
+    <link rel="stylesheet" href="./css/fontello.css" media="screen"/>
+    <link rel="stylesheet" href="./css/index.css" media="screen"/>
+    <script src="./js/index.js"></script>
+
     <title>Video Familia Foglino</title>
   </head>
   <body>
@@ -31,8 +31,8 @@
 
       Start modyfing from here.
     -->
-    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
+<div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center">
         <p
           class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
         >
@@ -47,17 +47,69 @@
           Este video es un bello recuerdo familiar del año 2022. 
           Alquilamos un hotel completo. Bellos momentos compartidos!!!
         </p>
-        
-        <div id="videoContainer">
-           <video id="my-video" controls>
-            <source src="./public/assets/Video Primada 2 VCP 2022.mp4" type="video/mp4">
-           </video>
-        </div>
-      
+  </div>
+</div>
+<div class="video-container">
+      <div class="video">
+          <video src="./assets/Video Primada 2 VCP 2022.mp4" type="video/mp4"></video>
+          <div class="video-controls">
+              
+                <div class="playPause">
+                  <div id="play">
+                    <i class="icon-play"></i>
+                  </div>
+                  
+                  <div id="pause"></div>
+                    <i class="icon-pause"></i>
+                </div>
 
+                <div class="time">
+                  <span>00:00/00:00</span>
+                </div>
 
+                <div class="reproduction-container">
+                  <div class="reproduction-body">
+                    <div class="reproduction-played"></div>
+                    <div class="circle-indicator"></div>
+                  </div>
+                </div>
+
+                <div class="video-options">
+                  <div class="volumen">
+                    <i class="icon-volume-up"></i>
+                    <div class="volumen-container">
+                      <div class="volumen-body">
+                        <div class="volumen-played"></div>
+                        <div class="circle-indicator"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="settings">
+                    <i class="icon-cog"></i>
+                    <div class="settings-container">
+                        <label for="">
+                          <input type="radio" name="velocity" value="0.5">0.5
+                        </label>
+                        <label for="">
+                          <input type="radio" name="velocity" value="1">normal
+                        </label>
+                        <label for="">
+                          <input type="radio" name="velocity" value="1.5">1.5
+                        </label>
+                        <label for="">
+                          <input type="radio" name="velocity" value="2">2
+                        </label>
+                      </div>
+                    </div>
+                </div>
+          </div>  
       </div>
-    </div>
+
+</div>    
+            <!-- <button onclick="playPause()">Play/Pause</button>
+            <button onclick="stop()">Stop</button>
+            <button onclick="skip(-10)">Retroceder</button>
+            <button onclick="skip(10)">Avanzar</button>   -->
 
     <!-- Add more scripts here -->
     <script type="module" src="./public/index.js"></script>
